@@ -1,0 +1,40 @@
+<div class="table-title">
+    <h3>support órák száma havi bontásban</h3>
+</div>
+
+<table class="table">
+    <thead>
+        <tr>
+            <th>projekt</th>
+            <th>január</th>
+            <th>február</th>
+            <th>március</th>
+            <th>április</th>
+            <th>május</th>
+            <th>június</th>
+            <th>július</th>
+            <th>augusztus</th>
+            <th>szeptember</th>
+            <th>október</th>
+            <th>november</th>
+            <th>december</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor = "let project of projects">
+            <td> {{project.name}} </td>
+            <td> {{project.supporthours[0]}} </td>
+            <td> {{project.supporthours[1]}} </td>
+            <td> {{project.supporthours[2]}} </td>
+            <td> {{project.supporthours[3]}} </td>
+            <td> {{project.supporthours[4]}} </td>
+            <td> {{project.supporthours[5]}} </td>
+            <td> {{project.supporthours[6]}} </td>
+            <td> {{project.supporthours[7]}} </td>
+            <td> {{project.supporthours[8]}} </td>
+            <td> {{project.supporthours[9]}} </td>
+            <td> {{project.supporthours[10]}} </td>
+            <td> {{project.supporthours[11]}} </td>
+        </tr>
+    </tbody>
+</table>
