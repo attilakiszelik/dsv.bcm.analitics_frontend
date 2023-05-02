@@ -1,0 +1,78 @@
+<div class="table-title">
+    <h3>használatok száma havi bontásban</h3>
+</div>
+
+<table class="table">
+    <thead>
+        <tr>
+            <th rowspan="2" style="vertical-align: middle">projekt</th>
+            <th colspan="2">január</th>
+            <th colspan="2">február</th>
+            <th colspan="2">március</th>
+            <th colspan="2">április</th>
+            <th colspan="2">május</th>
+            <th colspan="2">június</th>
+            <th colspan="2">július</th>
+            <th colspan="2">augusztus</th>
+            <th colspan="2">szeptember</th>
+            <th colspan="2">október</th>
+            <th colspan="2">november</th>
+            <th colspan="2">december</th>
+        </tr>
+        <tr>
+            <th>#</th>
+            <th><i class="fa-solid fa-users"></i></th>
+            <th>#</th>
+            <th><i class="fa-solid fa-users"></i></th>
+            <th>#</th>
+            <th><i class="fa-solid fa-users"></i></th>
+            <th>#</th>
+            <th><i class="fa-solid fa-users"></i></th>
+            <th>#</th>
+            <th><i class="fa-solid fa-users"></i></th>
+            <th>#</th>
+            <th><i class="fa-solid fa-users"></i></th>
+            <th>#</th>
+            <th><i class="fa-solid fa-users"></i></th>
+            <th>#</th>
+            <th><i class="fa-solid fa-users"></i></th>
+            <th>#</th>
+            <th><i class="fa-solid fa-users"></i></th>
+            <th>#</th>
+            <th><i class="fa-solid fa-users"></i></th>
+            <th>#</th>
+            <th><i class="fa-solid fa-users"></i></th>
+            <th>#</th>
+            <th><i class="fa-solid fa-users"></i></th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor = "let project of projects">
+            <td> {{project.projectname}} </td>
+            <td> {{project.usages[0]}} </td>
+            <td> <a href="">{{project.users[0].length}}</a> </td>
+            <td> {{project.usages[1]}} </td>
+            <td> <a href="">{{project.users[1].length}}</a> </td>
+            <td> {{project.usages[2]}} </td>
+            <td> <a href="">{{project.users[2].length}}</a> </td>
+            <td> {{project.usages[3]}} </td>
+            <td> <a href="">{{project.users[0].length }}</a> </td>
+            <td> {{project.usages[4]}} </td>
+            <td> <a href="">{{project.users[4].length}}</a> </td>
+            <td> {{project.usages[5]}} </td>
+            <td> <a href="">{{project.users[5].length}}</a> </td>
+            <td> {{project.usages[6]}} </td>
+            <td> <a href="">{{project.users[6].length}}</a> </td>
+            <td> {{project.usages[7]}} </td>
+            <td> <a href="">{{project.users[7].length}}</a> </td>
+            <td> {{project.usages[8]}} </td>
+            <td> <a href="">{{project.users[8].length}}</a> </td>
+            <td> {{project.usages[9]}} </td>
+            <td> <a href="">{{project.users[9].length}}</a> </td>
+            <td> {{project.usages[10]}} </td>
+            <td> <a href="">{{project.users[10].length}}</a> </td>
+            <td> {{project.usages[11]}} </td>
+            <td> <a href="">{{project.users[11].length}}</a> </td>
+        </tr>
+    </tbody>
+</table>

@@ -1,7 +1,6 @@
 export class Project{
-    name: string;
+    projectname: string;
     supporthours: number[];
     usages: number[];
-    numbersofusers: number[];
-    namesofusers: string[];
+    users: {[key: number]: string[]};
 }

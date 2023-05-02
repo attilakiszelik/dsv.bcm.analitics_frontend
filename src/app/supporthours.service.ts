@@ -8,12 +8,12 @@ import { Project } from './project';
 })
 export class SupporthoursService {
 
-  private baseURL = "http://localhost:8080/analitics/supporthours";
+  private baseURL = "http://localhost:8080/analitics/supporthours/";
 
   constructor(private httpClient: HttpClient) { }
 
-  getSupporthours(): Observable<Project[]>{
-    return this.httpClient.get<Project[]>(`${this.baseURL}`);
+  getSupporthours(year: number): Observable<Project[]>{
+    return this.httpClient.get<Project[]>(`${this.baseURL}${year}`);
   }
   
 }

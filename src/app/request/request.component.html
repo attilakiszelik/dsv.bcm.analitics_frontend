@@ -1,0 +1,16 @@
+<div class="container">
+    <form>
+        <div class="form-group">
+            <label for="yearSelect">év:</label>
+            <select [(ngModel)]="selectedYear" id="yearSelect" name="selectedYear">
+                <option *ngFor="let year of years" [value]="year">{{ year }}</option>
+            </select>
+        </div>
+        <div class="form-group">
+            <button (click)="goToSupportHours()">support órák száma</button>
+        </div>
+        <div class="form-group">
+            <button (click)="goToUsages()">automatizációk használata</button>
+        </div>
+    </form>
+</div>

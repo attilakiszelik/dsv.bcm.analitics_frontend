@@ -1,4 +1,5 @@
-import { Component } from '@angular/core';
+import { Component} from '@angular/core';
+import { ActivatedRoute } from "@angular/router";
 import { Project } from '../project';
 import { SupporthoursService } from '../supporthours.service';
 
@@ -10,29 +11,19 @@ import { SupporthoursService } from '../supporthours.service';
 export class SupporthoursListComponent {
 
   projects: Project[];
+  year: number;
 
-  constructor(private supporthoursService: SupporthoursService){}
+  constructor(private route: ActivatedRoute, private supporthoursService: SupporthoursService){}
 
   ngOnInit(): void{
-
-    this.getSupporthours();
     
-    /*teszt
-    this.reportrows = [{
-      "project": "teszt_1",
-      "usages": [1,2,3,4,5,6,7,8,9,10,11,12]
-    },
-    {
-      "project": "teszt_2",
-      "usages": [1,2,3,4,5,6,7,8,9,10,11,12]
-    }
-    ];
-    */
+    this.year = Number(this.route.snapshot.paramMap.get("year"));
+    this.getSupporthours(this.year);
 
   }
   
-  private getSupporthours(){
-    this.supporthoursService.getSupporthours().subscribe(data => {
+  private getSupporthours(year: number){
+    this.supporthoursService.getSupporthours(year).subscribe(data => {
       this.projects = data;
     });
   };
